@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 const Dashboard = () => {
   return (
     // Contenedor principal del dashboard con un diseño de grilla
-    <div className="grid grid-cols-2 grid-rows-2 md:grid-cols-3 md:grid-rows-3 gap-4 p-6 h-screen bg-gray-300 ">
+    <div className="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-3 gap-4 p-6 h-screen bg-gray-300 ">
       
       {/* Card Acerca del proyecto */}
       <Link to="/app/acerca-proyecto"
-        className="relative col-span-2 md:col-span-1 row-span-3 p-6 bg-green-700 text-black rounded-lg shadow-lg transition 
+        className="relative col-span-1 row-span-1 md:col-span-1 md:row-span-3 p-6 bg-green-700 text-black rounded-lg shadow-lg transition 
         duration-300 flex items-center justify-center group">
         
         {/* Imagen de fondo que se desvanece al hacer hover */}
@@ -25,7 +25,7 @@ const Dashboard = () => {
 
       {/* Card Gestionador */}
       <Link to="/app/gestion"
-        className="relative p-6 row-span-2 bg-green-700 text-black rounded-lg shadow-lg transition duration-300 flex items-center justify-center group">
+        className="relative p-6 md:row-span-2 md:col-span-1 bg-green-700 text-black rounded-lg shadow-lg transition duration-300 flex items-center justify-center group">
         
         {/* Imagen de fondo que se desvanece al hacer hover */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-300 group-hover:opacity-0 rounded-lg" style={{ backgroundImage: `url('/container2.jpg')` }}></div>
@@ -107,3 +107,4 @@ const Dashboard = () => {
 }
 
 export default Dashboard
+
